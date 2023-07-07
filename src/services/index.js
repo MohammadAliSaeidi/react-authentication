@@ -1,1 +1,0 @@
-export {IsEmail} from './InputValidator'
