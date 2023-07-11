@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './SignupPage.css';
+import './SignupPage.scss';
 import {validateUsername, validateEmail, validatePassword} from "../../services/InputValidator";
 
 let username = '';
@@ -53,7 +53,7 @@ function SignupPage() {
     }
 
     return (<div className='signup'>
-        <form onSubmit={handleOnSubmit} noValidate>
+        <form className='signup-form' onSubmit={handleOnSubmit} noValidate>
             {/*Username*/}
             <div className={authFieldClassName}>
                 {usernameError !== "" && <div>{usernameError}</div>}
@@ -79,23 +79,26 @@ function SignupPage() {
             </div>
 
             {/*Password*/}
-            <div className={authFieldClassName}>
+            <div className={"password-field"}>
                 {passwordError !== "" && <div>{passwordError}</div>}
                 <label htmlFor="password">Password</label>
-                <input
-                    onChange={onPasswordInputChange}
-                    type={showPassword ? 'text' : 'password'}
-                    name='password'
-                    minLength={8}
-                    maxLength={30}
-                />
-                <input
-                    type="checkbox"
-                    onChange={e => setShowPassword(e.target.checked)}
-                />
+                <div className='input-container'>
+                    <input
+                        onChange={onPasswordInputChange}
+                        type={showPassword ? 'text' : 'password'}
+                        name='password'
+                        minLength={8}
+                        maxLength={30}
+                    />
+                    <input className='show-password'
+                        type="checkbox"
+                        onChange={e => setShowPassword(e.target.checked)}
+                    />
+                </div>
             </div>
 
             <input
+                className='submit'
                 type="submit"
                 value="Signup"
             />
