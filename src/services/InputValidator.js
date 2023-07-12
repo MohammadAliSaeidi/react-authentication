@@ -23,7 +23,7 @@ export function validateUsername(inputStr) {
         return "Username contains invalid characters";
     }
 
-    return ""; // Empty string indicates a valid username
+    return "";
 }
 
 export function validatePassword(inputStr) {
@@ -38,4 +38,6 @@ export function validatePassword(inputStr) {
     if (!regex.test(inputStr)) {
         return "Password contains invalid characters";
     }
+
+    return "";
 }

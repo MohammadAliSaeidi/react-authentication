@@ -1,34 +1,20 @@
+@import '../../GlobalStyles';
+
+$field-width: 300px;
 
 .signup-form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    gap: 16px;
-}
-
-.auth-field > input {
-    width: 300px;
-    height: 36px;
-    box-sizing: border-box;
-    border: 1px solid #ababab;
-    border-radius: 5px;
-    margin-left: 10px;
-}
-
-.auth-field .password-field {
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: fit-content;
+  gap: 16px;
 }
 
 .signup-form > .submit {
-    width: 250px;
-}
-
-.password-field > .input-container {
-    position: relative;
+  @extend %button-style;
+  width: 10px;
 }

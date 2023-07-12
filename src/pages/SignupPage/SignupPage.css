@@ -1,3 +1,13 @@
+.signup-form > .submit {
+  height: 48px;
+  border: none;
+  border-radius: 5px;
+  background-color: mediumpurple;
+  color: white;
+  min-height: 48px;
+  cursor: pointer;
+}
+
 .signup-form {
   position: absolute;
   top: 50%;
@@ -5,27 +15,13 @@
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: stretch;
   width: fit-content;
   gap: 16px;
 }
 
-.auth-field > input {
-  width: 300px;
-  height: 36px;
-  box-sizing: border-box;
-  border: 1px solid #ababab;
-  border-radius: 5px;
-  margin-left: 10px;
-}
-
 .signup-form > .submit {
-  width: 250px;
-}
-
-.password-field > .input-container {
-  position: relative;
+  width: 10px;
 }
 
 /*# sourceMappingURL=SignupPage.css.map */
